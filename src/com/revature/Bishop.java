@@ -16,12 +16,12 @@ public class Bishop {
 		System.out.println("Please enter the ending position: ");
 		endPos = scan.nextLine();
 		System.out.println("Please enter the number of moves: ");
-		moves = Integer.valueOf(scan.nextLine());
+		moves = Integer.valueOf(scan.nextLine()); //Total number of moves
 		scan.close();
 		
 		
 		Position start = new Position(initialPos); //Starting position(a1-h8)
-		Position end = new Position(endPos);	 //Ending position(a1-h8)					 //Total number of moves
+		Position end = new Position(endPos);	 //Ending position(a1-h8)					 
 		
 		boolean outcome = checkBishop(start, end, moves);
 		System.out.println(outcome);
