@@ -1,12 +1,27 @@
 package com.revature;
 
+import java.util.Scanner;
+
 public class Bishop {
 
 	public static void main(String[] args) {
 		
-		Position start = new Position("a5"); //Starting position(a1-h8)
-		Position end = new Position("c3");	 //Ending position(a1-h8)
-		int moves = 1;						 //Total number of moves
+		Scanner scan = new Scanner(System.in);
+		String initialPos;
+		String endPos;
+		int moves;
+		
+		System.out.println("Please enter the starting position: ");
+		initialPos = scan.nextLine();
+		System.out.println("Please enter the ending position: ");
+		endPos = scan.nextLine();
+		System.out.println("Please enter the number of moves: ");
+		moves = Integer.valueOf(scan.nextLine());
+		scan.close();
+		
+		
+		Position start = new Position(initialPos); //Starting position(a1-h8)
+		Position end = new Position(endPos);	 //Ending position(a1-h8)					 //Total number of moves
 		
 		boolean outcome = checkBishop(start, end, moves);
 		System.out.println(outcome);
