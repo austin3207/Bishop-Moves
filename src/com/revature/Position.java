@@ -6,13 +6,13 @@ public class Position {
 	int x;//Represents Letter value
 	int y;//Represents Number value
 	String coordinates;	
-	boolean oddSquare; //Determines tile color(Dark or Light)
+	boolean oddSquare; //Tile type
 	
 	public Position(String location) {
 		coordinates = location;
 		x = location.charAt(0) - 96;
 		y = Character.getNumericValue(location.charAt(1));
-		if((x+y) % 2 == 1) {
+		if((x+y) % 2 == 1) {	//Determines tile type(Light or Dark)
 			oddSquare = true;
 		}
 		else {

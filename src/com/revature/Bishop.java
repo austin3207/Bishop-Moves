@@ -5,8 +5,8 @@ public class Bishop {
 	public static void main(String[] args) {
 		
 		Position start = new Position("a5"); //Starting position(a1-h8)
-		Position end = new Position("c5");
-		int moves = 2;
+		Position end = new Position("c3");	 //Ending position(a1-h8)
+		int moves = 1;						 //Total number of moves
 		
 		boolean outcome = checkBishop(start, end, moves);
 		System.out.println(outcome);
